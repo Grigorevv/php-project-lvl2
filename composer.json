@@ -1,0 +1,23 @@
+{
+    "name": "hexlet/code",
+    "bin": [
+        "bin/gendiff"],
+    "description": "PHP project 2",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Hexlet\\Code\\": "src/"
+        },
+        "files": 
+        ["src/diff.php"]
+    },
+    "authors": [
+        {
+            "name": "Viktor Grigorev",
+            "email": "7184243@gmail.com"
+        }
+    ],
+    "require": {
+        "docopt/docopt": "^1.0"
+    }
+}

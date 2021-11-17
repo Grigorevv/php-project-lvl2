@@ -9,7 +9,7 @@
             "Hexlet\\Code\\": "src/"
         },
         "files": 
-        ["src/diff.php"]
+        ["src/diff.php", "src/Parsers.php", "src/buildAst.php"]
     },
     "authors": [
         {
@@ -18,7 +18,8 @@
         }
     ],
     "require": {
-        "docopt/docopt": "^1.0"
+        "docopt/docopt": "^1.0",
+        "symfony/yaml": "^5.3"
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "*",

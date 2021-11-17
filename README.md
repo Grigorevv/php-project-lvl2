@@ -6,3 +6,5 @@
 
 
 [![Test Coverage](https://api.codeclimate.com/v1/badges/49528da7e2c5d44ae69d/test_coverage)](https://codeclimate.com/github/Grigorevv/php-project-lvl2/test_coverage)
+
+[![PHP Project II.](https://github.com/Grigorevv/php-project-lvl2/actions/workflows/workflow.yml/badge.svg)](https://github.com/Grigorevv/php-project-lvl2/actions/workflows/workflow.yml)

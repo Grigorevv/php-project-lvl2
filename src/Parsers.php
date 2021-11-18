@@ -9,10 +9,10 @@ function parser($data, $format)
     case 'json':
       return json_decode($data, true);;
 
-    case 'yml':
+  case 'yml':
         return Yaml::parse($data);
 
-    default:
-      throw new \Exception(`Unknown format: '${format}'!`); 
+  default:
+      throw new \Exception("Unknown format: '{$format}'!"); 
   }
 };

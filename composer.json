@@ -9,7 +9,7 @@
             "Hexlet\\Code\\": "src/"
         },
         "files": 
-        ["src/diff.php", "src/Parsers.php", "src/buildAst.php"]
+        ["src/diff.php", "src/Parsers.php", "src/buildAst.php", "src/formatters/plain.php"]
     },
     "authors": [
         {

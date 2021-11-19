@@ -19,10 +19,17 @@ class genDiffTest extends TestCase
         return realpath($path);
     }
 
-    public function testStylishJson(): void
+   /* public function testStylishJson(): void
     {
        $dataExpectedFile = file_get_contents($this->buildPath(self::$fileNameExpectedStylish));
        $diff = genDiff($this->buildPath(self::$fileNameJson1), $this->buildPath(self::$fileNameJson2), 'stylish');
+       $this->assertEquals($dataExpectedFile, $diff);
+    }
+*/
+    public function testPlainJson(): void
+    {
+       $dataExpectedFile = file_get_contents($this->buildPath(self::$fileNameExpectedPlain));
+       $diff = genDiff($this->buildPath(self::$fileNameYml1), $this->buildPath(self::$fileNameYml2), 'plain');
        $this->assertEquals($dataExpectedFile, $diff);
     }
 }

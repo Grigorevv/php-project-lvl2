@@ -6,12 +6,12 @@
 // ./gendiff ../tests/fixtures/f1.yml ../tests/fixtures/f2.yml
 
 namespace Differ\Differ;
+
 use function Parsers\Parsers\parser;
 use function Ast\Ast\buildAst;
 use function Plain\Plain\plain;
 
-
-function genDiff ($firstFilePath, $secondFilePath, $format)
+function genDiff($firstFilePath, $secondFilePath, $format)
 {
     $getFileData = fn($filepath) => file_get_contents($filepath);
     $getFileExtension = fn($filepath) => pathinfo($filepath, PATHINFO_EXTENSION);
@@ -19,7 +19,5 @@ function genDiff ($firstFilePath, $secondFilePath, $format)
     $data2 = parser($getFileData($secondFilePath), $getFileExtension($secondFilePath));
     $ast = buildAst($data1, $data2);
     $diffPlain = plain($ast);
-
-
     return "{$diffPlain}\n";
-};
+}

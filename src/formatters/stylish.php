@@ -2,7 +2,6 @@
 
 namespace Stylish\Stylish;
 
-
 function getIndent ($depth)
 {
   $replacer = ' ';
@@ -38,48 +37,37 @@ function iter ($currentValue, $depth)
   ['currentIndent' => $currentIndent, 'bracketIndent' => $bracketIndent] = getIndent($depth);
   $lines = array_map(function ($item) use ($currentIndent, $depth)
   {
-    ////////////////////попробовать убрать деструктуризацию заменить на обращением по ключу в массиве
-    ['key' => $key, 'type' => $type] = $item;
-
-    if ($type === 'nested') ['children' => $children] = $item;
-    elseif ($type === 'changed') ['value' => $value, 'value2' => $value2] = $item;
-    else ['value' => $value] = $item;
-///////////////////////////////
-
-    switch ($type) {
+    switch ($item['type']) {
       case 'changed':
-        $before = toStr($depth + 1, $value);
-        $after = toStr($depth + 1, $value2);
-
-        return "{$currentIndent}- {$key}: {$before}\n{$currentIndent}+ {$key}: {$after}";
-        //return `${currentIndent}- ${key}: ${toStr(depth + 1, value)}\n${currentIndent}+ ${key}: ${toStr(depth + 1, value2)}`;
+        $valueToStrBefore = toStr($depth + 1, $item['value']);
+        $valueToStrAfter = toStr($depth + 1, $item['value2']);
+        return "{$currentIndent}- {$item['key']}: {$valueToStrBefore}\n{$currentIndent}+ {$item['key']}: {$valueToStrAfter}";
 
       case 'added':
-        $after = toStr($depth + 1, $value);
-        return "{$currentIndent}+ {$key}: {$after}";
-        //return `${currentIndent}+ ${key}: ${toStr(depth + 1, value)}`;
+        $valueToStr = toStr($depth + 1, $item['value']);
+        return "{$currentIndent}+ {$item['key']}: {$valueToStr}";
 
       case 'deleted':
-        $after = toStr($depth + 1, $value);
-        return "{$currentIndent}- {$key}: {$after}";
+        $valueToStr = toStr($depth + 1, $item['value']);
+        return "{$currentIndent}- {$item['key']}: {$valueToStr}";
 
       case 'unchanged':
-        $after = toStr($depth + 1, $value);
-        return "{$currentIndent}  {$key}: {$after}";
+        $valueToStr = toStr($depth + 1, $item['value']);
+        return "{$currentIndent}  {$item['key']}: {$valueToStr}";
 
       case 'nested':
-        $after = iter($children, $depth + 1);
-        return "{$currentIndent}  {$key}: {$after}";
+        $valueToStr = iter($item['children'], $depth + 1);
+        return "{$currentIndent}  {$item['key']}: {$valueToStr}";
 
       default:
-      //  throw new Error(`Unknown type: '${type}'!`);
+        throw new \Exception("Unknown format: '{$item['type']}'!");
     }
   }, $currentValue);
 
   return join("\n", ["{", ...$lines, "{$bracketIndent}}"]);
 };
 
-function stylish ($ast) {
+function renderStylish ($ast) {
     return iter($ast, 1);
 }
 

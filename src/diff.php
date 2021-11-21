@@ -10,6 +10,7 @@ namespace Differ\Differ;
 use function Parsers\Parsers\parser;
 use function Ast\Ast\buildAst;
 use function Plain\Plain\plain;
+use function Stylish\Stylish\stylish;
 
 function genDiff($firstFilePath, $secondFilePath, $format)
 {
@@ -18,6 +19,8 @@ function genDiff($firstFilePath, $secondFilePath, $format)
     $data1 = parser($getFileData($firstFilePath), $getFileExtension($firstFilePath));
     $data2 = parser($getFileData($secondFilePath), $getFileExtension($secondFilePath));
     $ast = buildAst($data1, $data2);
-    $diffPlain = plain($ast);
+    //$diffPlain = plain($ast);
+    $diffPlain = stylish($ast);
+
     return "{$diffPlain}\n";
 }

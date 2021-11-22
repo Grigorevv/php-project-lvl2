@@ -10,7 +10,7 @@
         },
         "files": 
         ["src/diff.php", "src/Parsers.php", "src/buildAst.php",
-         "src/formatters/plain.php", "src/formatters/stylish.php", "src/format.php"]
+         "src/formatters/plain.php", "src/formatters/stylish.php", "src/format.php", "src/formatters/json.php"]
     },
     "authors": [
         {

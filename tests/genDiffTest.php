@@ -11,6 +11,7 @@ class genDiffTest extends TestCase
     public static $fileNameYml2 = 'f2.yml';
     public static $fileNameExpectedStylish = 'exp_stylish.txt';
     public static $fileNameExpectedPlain = 'exp_plain.txt';
+    public static $fileNameExpectedJson = 'exp_json.txt';
     public static $fixtures = './tests/fixtures/';
 
     public function buildPath($fileName)
@@ -19,17 +20,24 @@ class genDiffTest extends TestCase
         return realpath($path);
     }
 
-    public function testStylishJson(): void
+    public function testStylish(): void
     {
        $dataExpectedFile = file_get_contents($this->buildPath(self::$fileNameExpectedStylish));
        $diff = genDiff($this->buildPath(self::$fileNameJson1), $this->buildPath(self::$fileNameYml2), 'stylish');
        $this->assertEquals($dataExpectedFile, $diff);
     }
 
-    public function testPlainJson(): void
+    public function testPlain(): void
     {
        $dataExpectedFile = file_get_contents($this->buildPath(self::$fileNameExpectedPlain));
        $diff = genDiff($this->buildPath(self::$fileNameYml1), $this->buildPath(self::$fileNameJson2), 'plain');
+       $this->assertEquals($dataExpectedFile, $diff);
+    }
+
+    public function testJson(): void
+    {
+       $dataExpectedFile = file_get_contents($this->buildPath(self::$fileNameExpectedJson));
+       $diff = genDiff($this->buildPath(self::$fileNameYml1), $this->buildPath(self::$fileNameJson2), 'json');
        $this->assertEquals($dataExpectedFile, $diff);
     }
 

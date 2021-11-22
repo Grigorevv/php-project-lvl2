@@ -9,7 +9,10 @@ use function Format\Format\format;
 function genDiff($firstFilePath, $secondFilePath, $formatName = 'stylish')
 {
     $getFileData = fn($filepath) => file_get_contents($filepath);
-    $getFileExtension = fn($filepath) => pathinfo($filepath, PATHINFO_EXTENSION);
+    $getFileExtension = function ($filepath) {
+        $extension =  pathinfo($filepath, PATHINFO_EXTENSION);
+        return $extension === 'yaml' ? 'yml' : $extension;
+    };
     $data1 = parser($getFileData($firstFilePath), $getFileExtension($firstFilePath));
     $data2 = parser($getFileData($secondFilePath), $getFileExtension($secondFilePath));
     $ast = buildAst($data1, $data2);

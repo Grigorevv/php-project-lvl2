@@ -19,7 +19,8 @@ class GenDiffTest extends TestCase
 
     public function buildPath($fileName)
     {
-        $path = self::$fixtures .$fileName;
+        $pathToFixtures = self::$fixtures;
+        $path = "{$pathToFixtures}{$fileName}";
         return realpath($path);
     }
 

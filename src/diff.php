@@ -1,5 +1,8 @@
 <?php
 
+// ./gendiff ../tests/fixtures/f1.json ../tests/fixtures/f2.json
+// ./gendiff --format json ../tests/fixtures/f1.yml ../tests/fixtures/f2.yml
+
 namespace Differ\Differ;
 
 use function Parsers\Parsers\parser;

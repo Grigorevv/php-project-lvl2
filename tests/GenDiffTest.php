@@ -1,5 +1,7 @@
 <?php
 
+namespace Php\Project\Lvl2\Tests;
+
 use PHPUnit\Framework\TestCase;
 
 use function Differ\Differ\genDiff;
@@ -17,7 +19,7 @@ class GenDiffTest extends TestCase
 
     public function buildPath($fileName)
     {
-        $path = self::$fixtures.$fileName;
+        $path = self::$fixtures .$fileName;
         return realpath($path);
     }
 

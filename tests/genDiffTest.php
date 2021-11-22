@@ -33,12 +33,18 @@ class genDiffTest extends TestCase
        $diff = genDiff($this->buildPath(self::$fileNameJson1), $this->buildPath(self::$fileNameJson2), 'plain');
        $this->assertEquals($dataExpectedFile, $diff);
     }
-/*
+
+    public function testStylishYml(): void
+    {
+       $dataExpectedFile = file_get_contents($this->buildPath(self::$fileNameExpectedStylish));
+       $diff = genDiff($this->buildPath(self::$fileNameYml1), $this->buildPath(self::$fileNameYml2), 'stylish');
+       $this->assertEquals($dataExpectedFile, $diff);
+    }
+
     public function testJson(): void
     {
        $dataExpectedFile = file_get_contents($this->buildPath(self::$fileNameExpectedJson));
        $diff = genDiff($this->buildPath(self::$fileNameYml1), $this->buildPath(self::$fileNameJson2), 'json');
        $this->assertEquals($dataExpectedFile, $diff);
     }
-*/
 }

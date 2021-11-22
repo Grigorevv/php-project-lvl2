@@ -1,7 +1,7 @@
 <?php
 
 // ./gendiff ../tests/fixtures/f1.json ../tests/fixtures/f2.json
-// ./gendiff --format json ../tests/fixtures/f1.yml ../tests/fixtures/f2.yml
+// ./gendiff --format plain ../tests/fixtures/f1.json ../tests/fixtures/f2.json
 
 namespace Differ\Differ;
 
@@ -19,5 +19,6 @@ function genDiff($firstFilePath, $secondFilePath, $formatName = 'stylish')
     $data1 = parser($getFileData($firstFilePath), $getFileExtension($firstFilePath));
     $data2 = parser($getFileData($secondFilePath), $getFileExtension($secondFilePath));
     $ast = buildAst($data1, $data2);
+    $a = format($ast, $formatName);
     return format($ast, $formatName);
 }

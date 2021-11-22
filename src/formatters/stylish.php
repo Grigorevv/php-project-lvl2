@@ -2,6 +2,17 @@
 
 namespace Stylish\Stylish;
 
+function pairs($collection)
+{
+    return array_map(
+        function ($key, $value) {
+            return [$key, $value];
+        },
+        array_keys($collection),
+        $collection
+    );
+}
+
 function getIndent($depth)
 {
     $replacer = ' ';
@@ -18,7 +29,7 @@ function toStr($depth, $value)
     $boolToStr = [true => 'true', null => 'null', false => 'false'];
 
     if (is_array($value)) {
-        $keysValues = \Funct\Collection\pairs($value);
+        $keysValues = pairs($value);
         $lines = array_map(function ($item) use ($currentIndent, $depth) {
             [$key, $value] = $item;
             $valueToStr = toStr($depth + 1, $value);

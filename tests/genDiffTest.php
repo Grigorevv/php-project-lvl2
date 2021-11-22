@@ -1,9 +1,10 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
+
 use function Differ\Differ\genDiff;
 
-class genDiffTest extends TestCase
+class GenDiffTest extends TestCase
 {
     public static $fileNameJson1 = 'f1.json';
     public static $fileNameJson2 = 'f2.json';
@@ -22,29 +23,29 @@ class genDiffTest extends TestCase
 
     public function testStylish(): void
     {
-       $dataExpectedFile = file_get_contents($this->buildPath(self::$fileNameExpectedStylish));
-       $diff = genDiff($this->buildPath(self::$fileNameJson1), $this->buildPath(self::$fileNameJson2), 'stylish');
-       $this->assertEquals($dataExpectedFile, $diff);
+        $dataExpectedFile = file_get_contents($this->buildPath(self::$fileNameExpectedStylish));
+        $diff = genDiff($this->buildPath(self::$fileNameJson1), $this->buildPath(self::$fileNameJson2), 'stylish');
+        $this->assertEquals($dataExpectedFile, $diff);
     }
 
     public function testPlain(): void
     {
-       $dataExpectedFile = file_get_contents($this->buildPath(self::$fileNameExpectedPlain));
-       $diff = genDiff($this->buildPath(self::$fileNameJson1), $this->buildPath(self::$fileNameJson2), 'plain');
-       $this->assertEquals($dataExpectedFile, $diff);
+        $dataExpectedFile = file_get_contents($this->buildPath(self::$fileNameExpectedPlain));
+        $diff = genDiff($this->buildPath(self::$fileNameJson1), $this->buildPath(self::$fileNameJson2), 'plain');
+        $this->assertEquals($dataExpectedFile, $diff);
     }
 
     public function testStylishYml(): void
     {
-       $dataExpectedFile = file_get_contents($this->buildPath(self::$fileNameExpectedStylish));
-       $diff = genDiff($this->buildPath(self::$fileNameYml1), $this->buildPath(self::$fileNameYml2), 'stylish');
-       $this->assertEquals($dataExpectedFile, $diff);
+        $dataExpectedFile = file_get_contents($this->buildPath(self::$fileNameExpectedStylish));
+        $diff = genDiff($this->buildPath(self::$fileNameYml1), $this->buildPath(self::$fileNameYml2), 'stylish');
+        $this->assertEquals($dataExpectedFile, $diff);
     }
 
     public function testJson(): void
     {
-       $dataExpectedFile = file_get_contents($this->buildPath(self::$fileNameExpectedJson));
-       $diff = genDiff($this->buildPath(self::$fileNameYml1), $this->buildPath(self::$fileNameJson2), 'json');
-       $this->assertEquals($dataExpectedFile, $diff);
+        $dataExpectedFile = file_get_contents($this->buildPath(self::$fileNameExpectedJson));
+        $diff = genDiff($this->buildPath(self::$fileNameYml1), $this->buildPath(self::$fileNameJson2), 'json');
+        $this->assertEquals($dataExpectedFile, $diff);
     }
 }

@@ -4,7 +4,7 @@ namespace Parsers\Parsers;
 
 use Symfony\Component\Yaml\Yaml;
 
-function parser($data, $format)
+function parser(string $data, string $format): array
 {
     switch ($format) {
         case 'json':

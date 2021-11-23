@@ -6,7 +6,7 @@ use function Plain\Plain\renderPlain;
 use function Stylish\Stylish\renderStylish;
 use function Json\Json\renderJson;
 
-function format($ast, $formatName)
+function format(array $ast, string $formatName): string
 {
     switch ($formatName) {
         case 'stylish':

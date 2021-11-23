@@ -2,7 +2,7 @@
 
 namespace Json\Json;
 
-function renderJson($ast)
+function renderJson(array $ast): string
 {
     return json_encode($ast);
 }

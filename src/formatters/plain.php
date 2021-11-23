@@ -2,7 +2,7 @@
 
 namespace Plain\Plain;
 
-function toStr($value, $boolToStr)
+function toStr($value, array $boolToStr): string
 {
     if (gettype($value) === 'boolean' || $value === null) {
         return $boolToStr[$value];
@@ -12,7 +12,7 @@ function toStr($value, $boolToStr)
     return is_array($value) ? '[complex value]' : "'{$value}'";
 }
 
-function iter($currentValue, $anchestry = [])
+function iter($currentValue, array $anchestry = []): string
 {
     $boolToStr = [true => 'true', null => 'null', false => 'false'];
 
@@ -50,7 +50,7 @@ function iter($currentValue, $anchestry = [])
     }, $currentValue);
         return join("\n", array_filter($result, fn($item) => $item !== ''));
 }
-function renderPlain($ast)
+function renderPlain(array $ast): string
 {
     return iter($ast);
 }

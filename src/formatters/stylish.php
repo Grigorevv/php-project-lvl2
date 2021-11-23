@@ -2,7 +2,7 @@
 
 namespace Stylish\Stylish;
 
-function pairs($collection)
+function pairs(array $collection): array
 {
     return array_map(
         function ($key, $value) {
@@ -13,7 +13,7 @@ function pairs($collection)
     );
 }
 
-function getIndent($depth)
+function getIndent(int $depth): array
 {
     $replacer = ' ';
     $spacesCount = 4;
@@ -23,7 +23,7 @@ function getIndent($depth)
     return ['currentIndent' => $currentIndent, 'bracketIndent' => $bracketIndent];
 }
 
-function toStr($depth, $value)
+function toStr(int $depth, mixed $value): string
 {
     ['currentIndent' => $currentIndent, 'bracketIndent' => $bracketIndent] = getIndent($depth);
     $boolToStr = [true => 'true', null => 'null', false => 'false'];
@@ -40,7 +40,7 @@ function toStr($depth, $value)
     return gettype($value) === 'boolean' || $value === null ? $boolToStr[$value] : $value;
 }
 
-function iter($currentValue, $depth)
+function iter(mixed $currentValue, int $depth): string
 {
     ['currentIndent' => $curInd, 'bracketIndent' => $bracketIndent] = getIndent($depth);
     $lines = array_map(function ($item) use ($curInd, $depth) {
@@ -72,7 +72,7 @@ function iter($currentValue, $depth)
     }, $currentValue);
     return join("\n", ["{", ...$lines, "{$bracketIndent}}"]);
 }
-function renderStylish($ast)
+function renderStylish(array $ast): string
 {
     return iter($ast, 1);
 }

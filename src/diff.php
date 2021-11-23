@@ -13,6 +13,7 @@ function genDiff(string $firstFilePath, string $secondFilePath, string $formatNa
         $extension =  pathinfo($filepath, PATHINFO_EXTENSION);
         return $extension === 'yaml' ? 'yml' : $extension;
     };
+
     $data1 = parser($getFileData($firstFilePath), $getFileExtension($firstFilePath));
     $data2 = parser($getFileData($secondFilePath), $getFileExtension($secondFilePath));
     $ast = buildAst($data1, $data2);

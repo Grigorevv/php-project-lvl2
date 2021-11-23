@@ -12,7 +12,7 @@ function toStr($value, array $boolToStr): string
     return is_array($value) ? '[complex value]' : "'{$value}'";
 }
 
-function iter($currentValue, array $anchestry = []): string
+function iter(array $currentValue, array $anchestry = []): string
 {
     $boolToStr = [true => 'true', null => 'null', false => 'false'];
 

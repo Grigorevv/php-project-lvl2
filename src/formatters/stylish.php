@@ -40,7 +40,7 @@ function toStr(int $depth, mixed $value): string
     return gettype($value) === 'boolean' || $value === null ? $boolToStr[$value] : $value;
 }
 
-function iter(mixed $currentValue, int $depth): string
+function iter(array $currentValue, int $depth): string
 {
     ['currentIndent' => $curInd, 'bracketIndent' => $bracketIndent] = getIndent($depth);
     $lines = array_map(function ($item) use ($curInd, $depth) {

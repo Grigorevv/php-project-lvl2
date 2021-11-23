@@ -2,7 +2,7 @@
 
 namespace Plain\Plain;
 
-function toStr($value, array $boolToStr): string
+function toStr(mixed $value, array $boolToStr): string
 {
     if (gettype($value) === 'boolean' || $value === null) {
         return $boolToStr[$value];

@@ -1,5 +1,7 @@
 <?php
-
+// ./bin/gendiff ./tests/fixtures/f1.json ./tests/fixtures/f2.json
+// ./bin/gendiff --format plain ./tests/fixtures/f1.json ./tests/fixtures/f2.json
+// ./bin/gendiff -h
 namespace Parsers\Parsers;
 
 use Symfony\Component\Yaml\Yaml;

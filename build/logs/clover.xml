@@ -1,64 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1637589851">
-  <project timestamp="1637589851">
+<coverage generated="1640167056">
+  <project timestamp="1640167056">
     <file name="/home/viktor/Hexlet/PHP/php-project-lvl2/src/Parsers.php">
-      <line num="9" type="stmt" count="2"/>
-      <line num="10" type="stmt" count="2"/>
-      <line num="11" type="stmt" count="2"/>
-      <line num="13" type="stmt" count="0"/>
-      <line num="14" type="stmt" count="0"/>
+      <line num="10" type="stmt" count="4"/>
+      <line num="11" type="stmt" count="3"/>
+      <line num="13" type="stmt" count="2"/>
+      <line num="14" type="stmt" count="2"/>
       <line num="17" type="stmt" count="0"/>
-      <metrics loc="19" ncloc="19" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="3" elements="6" coveredelements="3"/>
+      <metrics loc="19" ncloc="19" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="4" elements="5" coveredelements="4"/>
     </file>
     <file name="/home/viktor/Hexlet/PHP/php-project-lvl2/src/buildAst.php">
-      <line num="7" type="stmt" count="2"/>
-      <line num="8" type="stmt" count="2"/>
-      <line num="10" type="stmt" count="2"/>
-      <line num="12" type="stmt" count="2"/>
-      <line num="13" type="stmt" count="2"/>
-      <line num="16" type="stmt" count="2"/>
-      <line num="17" type="stmt" count="2"/>
-      <line num="20" type="stmt" count="2"/>
-      <line num="21" type="stmt" count="2"/>
-      <line num="24" type="stmt" count="2"/>
-      <line num="25" type="stmt" count="2"/>
-      <line num="27" type="stmt" count="2"/>
-      <line num="28" type="stmt" count="2"/>
-      <line num="29" type="stmt" count="2"/>
-      <metrics loc="30" ncloc="26" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="14" coveredstatements="14" elements="14" coveredelements="14"/>
+      <line num="9" type="stmt" count="4"/>
+      <line num="10" type="stmt" count="4"/>
+      <line num="12" type="stmt" count="4"/>
+      <line num="13" type="stmt" count="4"/>
+      <line num="14" type="stmt" count="4"/>
+      <line num="17" type="stmt" count="4"/>
+      <line num="18" type="stmt" count="4"/>
+      <line num="21" type="stmt" count="4"/>
+      <line num="22" type="stmt" count="4"/>
+      <line num="25" type="stmt" count="4"/>
+      <line num="26" type="stmt" count="4"/>
+      <line num="28" type="stmt" count="4"/>
+      <line num="29" type="stmt" count="4"/>
+      <line num="30" type="stmt" count="4"/>
+      <metrics loc="31" ncloc="27" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="14" coveredstatements="14" elements="14" coveredelements="14"/>
     </file>
     <file name="/home/viktor/Hexlet/PHP/php-project-lvl2/src/diff.php">
-      <line num="14" type="stmt" count="2"/>
-      <line num="15" type="stmt" count="2"/>
-      <line num="16" type="stmt" count="2"/>
-      <line num="17" type="stmt" count="2"/>
-      <line num="18" type="stmt" count="2"/>
-      <line num="19" type="stmt" count="2"/>
-      <line num="20" type="stmt" count="2"/>
-      <line num="21" type="stmt" count="2"/>
-      <line num="22" type="stmt" count="2"/>
-      <metrics loc="23" ncloc="21" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="9" coveredelements="9"/>
+      <line num="11" type="stmt" count="4"/>
+      <line num="12" type="stmt" count="4"/>
+      <line num="13" type="stmt" count="4"/>
+      <line num="14" type="stmt" count="4"/>
+      <line num="17" type="stmt" count="4"/>
+      <line num="18" type="stmt" count="4"/>
+      <line num="19" type="stmt" count="4"/>
+      <line num="20" type="stmt" count="4"/>
+      <metrics loc="21" ncloc="21" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="8" elements="8" coveredelements="8"/>
     </file>
     <file name="/home/viktor/Hexlet/PHP/php-project-lvl2/src/format.php">
-      <line num="11" type="stmt" count="2"/>
-      <line num="12" type="stmt" count="2"/>
-      <line num="13" type="stmt" count="1"/>
-      <line num="15" type="stmt" count="1"/>
+      <line num="12" type="stmt" count="4"/>
+      <line num="13" type="stmt" count="2"/>
+      <line num="15" type="stmt" count="2"/>
       <line num="16" type="stmt" count="1"/>
-      <line num="18" type="stmt" count="0"/>
-      <line num="19" type="stmt" count="0"/>
+      <line num="18" type="stmt" count="1"/>
+      <line num="19" type="stmt" count="1"/>
       <line num="22" type="stmt" count="0"/>
-      <metrics loc="24" ncloc="24" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="5" elements="8" coveredelements="5"/>
+      <metrics loc="24" ncloc="24" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="6" elements="7" coveredelements="6"/>
     </file>
     <file name="/home/viktor/Hexlet/PHP/php-project-lvl2/src/formatters/json.php">
-      <line num="7" type="stmt" count="0"/>
-      <metrics loc="8" ncloc="8" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="1" coveredelements="0"/>
+      <line num="7" type="stmt" count="1"/>
+      <metrics loc="8" ncloc="8" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="1" coveredelements="1"/>
     </file>
     <file name="/home/viktor/Hexlet/PHP/php-project-lvl2/src/formatters/plain.php">
       <line num="7" type="stmt" count="1"/>
       <line num="8" type="stmt" count="1"/>
       <line num="9" type="stmt" count="1"/>
-      <line num="10" type="stmt" count="0"/>
+      <line num="10" type="stmt" count="1"/>
       <line num="12" type="stmt" count="1"/>
       <line num="17" type="stmt" count="1"/>
       <line num="19" type="stmt" count="1"/>
@@ -86,51 +83,56 @@
       <line num="50" type="stmt" count="1"/>
       <line num="51" type="stmt" count="1"/>
       <line num="55" type="stmt" count="1"/>
-      <metrics loc="56" ncloc="56" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="31" coveredstatements="29" elements="31" coveredelements="29"/>
+      <metrics loc="56" ncloc="56" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="31" coveredstatements="30" elements="31" coveredelements="30"/>
     </file>
     <file name="/home/viktor/Hexlet/PHP/php-project-lvl2/src/formatters/stylish.php">
-      <line num="7" type="stmt" count="1"/>
-      <line num="8" type="stmt" count="1"/>
-      <line num="9" type="stmt" count="1"/>
-      <line num="10" type="stmt" count="1"/>
-      <line num="11" type="stmt" count="1"/>
-      <line num="12" type="stmt" count="1"/>
-      <line num="17" type="stmt" count="1"/>
-      <line num="18" type="stmt" count="1"/>
-      <line num="20" type="stmt" count="1"/>
-      <line num="21" type="stmt" count="1"/>
-      <line num="22" type="stmt" count="1"/>
-      <line num="23" type="stmt" count="1"/>
-      <line num="24" type="stmt" count="1"/>
-      <line num="25" type="stmt" count="1"/>
-      <line num="26" type="stmt" count="1"/>
-      <line num="27" type="stmt" count="1"/>
-      <line num="29" type="stmt" count="1"/>
-      <line num="34" type="stmt" count="1"/>
-      <line num="35" type="stmt" count="1"/>
-      <line num="36" type="stmt" count="1"/>
-      <line num="37" type="stmt" count="1"/>
-      <line num="38" type="stmt" count="1"/>
-      <line num="39" type="stmt" count="1"/>
-      <line num="40" type="stmt" count="1"/>
-      <line num="42" type="stmt" count="1"/>
-      <line num="43" type="stmt" count="1"/>
-      <line num="44" type="stmt" count="1"/>
-      <line num="46" type="stmt" count="1"/>
-      <line num="47" type="stmt" count="1"/>
-      <line num="48" type="stmt" count="1"/>
-      <line num="50" type="stmt" count="1"/>
-      <line num="51" type="stmt" count="1"/>
-      <line num="52" type="stmt" count="1"/>
-      <line num="54" type="stmt" count="1"/>
-      <line num="55" type="stmt" count="1"/>
-      <line num="56" type="stmt" count="1"/>
-      <line num="59" type="stmt" count="0"/>
-      <line num="61" type="stmt" count="1"/>
-      <line num="62" type="stmt" count="1"/>
-      <line num="66" type="stmt" count="1"/>
-      <metrics loc="67" ncloc="67" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="40" coveredstatements="39" elements="40" coveredelements="39"/>
+      <line num="7" type="stmt" count="2"/>
+      <line num="8" type="stmt" count="2"/>
+      <line num="9" type="stmt" count="2"/>
+      <line num="10" type="stmt" count="2"/>
+      <line num="11" type="stmt" count="2"/>
+      <line num="18" type="stmt" count="2"/>
+      <line num="19" type="stmt" count="2"/>
+      <line num="20" type="stmt" count="2"/>
+      <line num="21" type="stmt" count="2"/>
+      <line num="22" type="stmt" count="2"/>
+      <line num="23" type="stmt" count="2"/>
+      <line num="28" type="stmt" count="2"/>
+      <line num="29" type="stmt" count="2"/>
+      <line num="31" type="stmt" count="2"/>
+      <line num="32" type="stmt" count="2"/>
+      <line num="33" type="stmt" count="2"/>
+      <line num="34" type="stmt" count="2"/>
+      <line num="35" type="stmt" count="2"/>
+      <line num="36" type="stmt" count="2"/>
+      <line num="37" type="stmt" count="2"/>
+      <line num="38" type="stmt" count="2"/>
+      <line num="40" type="stmt" count="2"/>
+      <line num="45" type="stmt" count="2"/>
+      <line num="46" type="stmt" count="2"/>
+      <line num="47" type="stmt" count="2"/>
+      <line num="48" type="stmt" count="2"/>
+      <line num="49" type="stmt" count="2"/>
+      <line num="50" type="stmt" count="2"/>
+      <line num="51" type="stmt" count="2"/>
+      <line num="53" type="stmt" count="2"/>
+      <line num="54" type="stmt" count="2"/>
+      <line num="55" type="stmt" count="2"/>
+      <line num="57" type="stmt" count="2"/>
+      <line num="58" type="stmt" count="2"/>
+      <line num="59" type="stmt" count="2"/>
+      <line num="61" type="stmt" count="2"/>
+      <line num="62" type="stmt" count="2"/>
+      <line num="63" type="stmt" count="2"/>
+      <line num="65" type="stmt" count="2"/>
+      <line num="66" type="stmt" count="2"/>
+      <line num="67" type="stmt" count="2"/>
+      <line num="70" type="stmt" count="0"/>
+      <line num="72" type="stmt" count="2"/>
+      <line num="73" type="stmt" count="2"/>
+      <line num="77" type="stmt" count="2"/>
+      <metrics loc="78" ncloc="78" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="45" coveredstatements="44" elements="45" coveredelements="44"/>
     </file>
-    <metrics files="7" loc="227" ncloc="221" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="109" coveredstatements="99" elements="109" coveredelements="99"/>
+    <metrics files="7" loc="237" ncloc="233" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="111" coveredstatements="107" elements="111" coveredelements="107"/>
   </project>
 </coverage>
